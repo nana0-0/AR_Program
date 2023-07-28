@@ -73,7 +73,7 @@ a::after{
     content: "";
     width: 16px;
     position: absolute;
-    background: url(/img/arrow.svg) center center;
+    background: url(img/arrow.svg) center center;
     background-repeat: no-repeat;
     background-size: 100%;
     padding-top: 20px;
