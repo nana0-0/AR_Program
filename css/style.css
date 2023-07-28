@@ -1,42 +1,27 @@
-
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 body{
     background: #000;
     width: 30%;
     margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
-.pr{
-    position: relative;
-    width: 100%;
-}
-
-/* ul{
-    display: flex;
-}
-
-ul li{
-    padding-right: 50px;
-    list-style: none;
-} */
-
-.top{
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+a{
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .topimg{
-    position: relative;
-    left: 20%;
-    margin-top: 72px;
-    width: 320px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 250px;
 }
 
 .flow{
     position: absolute;
-    top: 630px;
-    right: 3px;
+    top: 490px;
+    right: 15px;
 }
 
 .topimg_p{
@@ -45,10 +30,16 @@ ul li{
     color: #DDD;
     position: absolute;
     font-weight: bold;
-    font-size: 23px;
-    top: 93px;
-    right:-30px;
+    font-size: 20px;
+    top: 70px;
+    right:-10px;
     z-index: 99;
+}
+
+.top_p{
+    position: absolute;
+    top: 490px;
+    left: 30px;
 }
 
 h1{
@@ -73,6 +64,8 @@ a{
     border-radius: 20px;
     position: relative;
     margin-bottom: 72px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
 }
 
 
@@ -97,7 +90,7 @@ a::after{
 @media (max-width: 700px) {
     body{
         background: #000;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 

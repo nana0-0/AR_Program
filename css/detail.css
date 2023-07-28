@@ -1,15 +1,18 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
 body{
     background: #C3C3C3;
     width: 30%;
     margin: 0 auto;
     padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 iframe{
     height: 400px;
     position: relative;
     top: 110px;
-    z-index: -20;
+    z-index: 1;
 }
 
 .back_a{
@@ -80,6 +83,7 @@ h1{
     border-radius: 20px 20px 0px 0px;
     padding-bottom: 40px;
     z-index: 56;
+    position: relative;
 }
 
 dl{
