@@ -1,4 +1,12 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+#show3{
+    display: none;
+}
+
+#show2{
+    display: none;
+}
 
 body{
     width: 30%;
