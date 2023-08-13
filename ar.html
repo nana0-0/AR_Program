@@ -18,8 +18,23 @@
 
 <script>
     window.addEventListener('load', () => {
+        const marker1 = document.getElementById("animated-marker1")
         const marker2 = document.getElementById("animated-marker2")
         const marker3 = document.getElementById("animated-marker3")
+
+        marker1.addEventListener('markerFound', () => {
+            let show1 = document.getElementById('show1');
+            show1.style.display = 'block'
+            show1.style.zIndex = '99'
+
+            let show2 = document.getElementById('show2');
+            show2.style.display = 'none'
+
+            let show3 = document.getElementById('show3');
+            show3.style.display = 'none'
+
+            console.log("1")
+        })
 
         marker2.addEventListener('markerFound', () => {
             let show2 = document.getElementById('show2');
@@ -29,7 +44,10 @@
             let show3 = document.getElementById('show3');
             show3.style.display = 'none'
 
-            console.log("2")
+            let show1 = document.getElementById('show1');
+            show1.style.display = 'none'
+
+            console.log("1")
         })
 
         marker3.addEventListener('markerFound', () => {
@@ -42,6 +60,9 @@
             show2.style.display = 'none'
 
             console.log("3")
+
+            let show1 = document.getElementById('show1');
+            show1.style.display = 'none'
         })
     })
 
@@ -83,6 +104,17 @@
     <h1>Fantasy & Beyond Museum</h1>
     <a href="index.html" class="back_a"><img class="back_btn" src="img/back_btn.svg" alt="戻るボタン"></a>
 
+    <label for="menu" id="show1" class="label">
+        <a href="detail1.html" class="detail_a">
+            <img class="black_img" src="img/3image_black.png" alt="画像">
+            <dl class="l_dl">
+                <dt>Silverwing</dt>
+                <dd>シルバーウィング</dd>
+            </dl>
+            <img class="plus_btn" src="img/plus_btn.svg" alt="詳細表示ボタン">
+        </a>
+    </label>
+
     <label for="menu" id="show3" class="label">
         <a href="detail3.html" class="detail_a">
             <img class="black_img" src="img/3image_black.png" alt="画像">
@@ -110,19 +142,25 @@
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" gesture-detector>
         <a-assets>
             <a-asset-item id="animated-asset3" src="assets/asset3.glb">
-                <a-asset-item id="animated-asset2" src="assets/asset2.glb">
+            <a-asset-item id="animated-asset2" src="assets/asset2.glb">
+            <a-asset-item id="animated-asset1" src="assets/asset3.glb">
         </a-assets>
 
+        <a-marker id="animated-marker1" markerhandler1 type="pattern" preset="custom" url="assets/marker1.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+            <a-entity id="bowser-model" scale="0.8 0.8 0.8" animation-mixer="loop: repeat" gltf-model="#animated-asset1"
+                class="clickable" gesture-handler></a-entity>
+        </a-marker>
 
         <a-marker id="animated-marker3" markerhandler3 type="pattern" preset="custom" url="assets/marker3.patt"
             raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="bowser-model" scale="0.5 0.5 0.5" animation-mixer="loop: repeat" gltf-model="#animated-asset3"
+            <a-entity id="bowser-model" scale="0.8 0.8 0.8" animation-mixer="loop: repeat" gltf-model="#animated-asset3"
                 class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker id="animated-marker2" markerhandler2 type="pattern" preset="custom" url="assets/marker2.patt"
             raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="bowser-model" scale="0.5 0.5 0.5" animation-mixer="loop: repeat" gltf-model="#animated-asset2"
+            <a-entity id="bowser-model" scale="0.8 0.8 0.8" animation-mixer="loop: repeat" gltf-model="#animated-asset2"
                 class="clickable" gesture-handler></a-entity>
         </a-marker>
 

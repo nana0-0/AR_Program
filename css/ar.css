@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
+#show1{
+    display: none;
+}
+
 #show3{
     display: none;
 }
